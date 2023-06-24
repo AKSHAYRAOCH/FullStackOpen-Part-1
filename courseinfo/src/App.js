@@ -1,3 +1,4 @@
+import { useState } from "react"
 
   
 const Header = (props)=>{
@@ -42,7 +43,8 @@ const Total = (props)=>{
 
 
 const App = () => {
-
+  const [counter, Setcounter] = useState(0);
+    Setcounter(counter+1)
   const course = { 
    name:'Half Stack application development',
   
@@ -77,7 +79,7 @@ return(
   <div>
     <Header course={course.name}/>
     <Content  part1={course.parts[0]}  part2={course.parts[1]}  part3 ={course.parts[2]}  />
-    
+
     <Total exercises1={course.parts[0].exercises} exercises2={course.parts[1].exercises} exercises3={course.parts[2].exercises}/> 
   </div>
   )
